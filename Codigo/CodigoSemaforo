@@ -1,0 +1,56 @@
+// C++ code
+// -Ivan Gonzalez
+//-Lucas Ibarra
+//-thiago vallejos
+//1J
+
+#define Led_verde 2
+#define Led_amarillo 3
+#define Led_rojo 4
+#define Bocina 5
+
+void setup()
+{
+  pinMode(Led_verde, OUTPUT);
+  pinMode(Led_amarillo, OUTPUT);
+  pinMode(Led_rojo, OUTPUT);
+  pinMode(Bocina, OUTPUT);
+  Serial.begin(9600);
+}
+
+
+void loop()
+{
+semaforo();
+}
+
+void bocina(int seg,int tono,int pausa){
+  for (int i = 0; i < seg; i++){
+  	 tone(Bocina, tono);
+     delay(200);
+     noTone(Bocina);
+     delay(pausa);
+  }
+}
+
+void titilar(int led, long pausa){
+	digitalWrite(led, HIGH);
+	delay(pausa);
+  	digitalWrite(led, LOW);
+}
+
+void titilar_y_bocina(int led,int seg ,int tono, int pausa){
+	digitalWrite(led, HIGH);
+  	bocina(seg, tono, pausa);
+	digitalWrite(led, LOW);
+}
+
+void semaforo(){
+	titilar(Led_verde, 45000);
+  
+  	titilar_y_bocina(Led_amarillo,3 ,100, 1466);
+  	
+  	titilar_y_bocina(Led_rojo,30 ,300, 800);
+
+  	titilar_y_bocina(Led_amarillo,3 ,100, 1466);
+}
