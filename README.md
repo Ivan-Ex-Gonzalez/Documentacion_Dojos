@@ -6,7 +6,7 @@
 
 -Lucas Ibarra
 
--thiago vallejos
+-Thiago Vallejos
 
 ## Trabajo practico de SPD
 
