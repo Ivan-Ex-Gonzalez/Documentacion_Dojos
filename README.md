@@ -83,6 +83,6 @@ void titilar_y_bocina(int led,int seg ,int tono, int pausa){
 	digitalWrite(led, LOW);
 }
 ```
-## Link al proyecto
+## :eight_pointed_black_star:Link al proyecto
 
 [Proyecto](https://www.tinkercad.com/things/1gNFAecIVWj-trabajo-semaforo/editel?sharecode=M5SdX0AJQG7TelWFGErJqWsMhgbzaXoqOu697lifn-U)
