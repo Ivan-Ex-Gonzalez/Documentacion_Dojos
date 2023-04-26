@@ -4,7 +4,7 @@
 
 -Ivan Gonzalez
 
--Lucas Ibarra
+-Lucas Ibarrola
 
 -Thiago Vallejos
 
